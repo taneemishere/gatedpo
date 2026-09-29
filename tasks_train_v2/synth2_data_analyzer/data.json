@@ -1,0 +1,28 @@
+{
+  "name": "data_analyzer",
+  "instructions": "There is a bug in the `DataAnalyzer` class where the `_calculate_average` method does not handle cases when the input list is empty. This causes a division by zero error. The method should return None when the list is empty.",
+  "repo_files": [
+    {
+      "path": "src/data_analyzer.py",
+      "content": "class DataAnalyzer:\n    def __init__(self, data):\n        self.data = data\n\n    def _calculate_average(self):\n        return sum(self.data) / len(self.data)\n\n    def get_average(self):\n        average = self._calculate_average()\n        return f'The average is {average}'\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/data_analyzer.py",
+      "content": "class DataAnalyzer:\n    def __init__(self, data):\n        self.data = data\n\n    def _calculate_average(self):\n        if not self.data:\n            return None\n        return sum(self.data) / len(self.data)\n\n    def get_average(self):\n        average = self._calculate_average()\n        if average is None:\n            return 'No data to calculate average'\n        return f'The average is {average}'\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_data_analyzer.py",
+      "content": "from src.data_analyzer import DataAnalyzer\nimport pytest\n\n@pytest.mark.visible\ndef test_calculate_average_with_data():\n    analyzer = DataAnalyzer([10, 20, 30])\n    assert analyzer.get_average() == 'The average is 20.0'\n\n@pytest.mark.visible\ndef test_calculate_average_with_empty_list():\n    analyzer = DataAnalyzer([])\n    assert analyzer.get_average() == 'No data to calculate average'"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_data_analyzer_regression.py",
+      "content": "from src.data_analyzer import DataAnalyzer\nimport pytest\n\n@pytest.mark.regression\ndef test_calculate_average_with_data_regression():\n    analyzer = DataAnalyzer([10, 20, 30])\n    assert analyzer.get_average() == 'The average is 20.0'\n\n@pytest.mark.regression\ndef test_calculate_average_with_empty_list_regression():\n    analyzer = DataAnalyzer([])\n    assert analyzer.get_average() == 'No data to calculate average'"
+    }
+  ]
+}

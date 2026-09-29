@@ -1,0 +1,1 @@
+A function `binary_to_decimal` is supposed to convert a binary string to its decimal equivalent but it currently returns the binary string unchanged.

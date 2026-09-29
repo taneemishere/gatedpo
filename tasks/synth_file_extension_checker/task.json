@@ -1,0 +1,1 @@
+{"id": "synth_file_extension_checker", "name": "synth_file_extension_checker", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/checker.py"], "visible_tests": ["tests/visible/test_checker.py"], "regression_tests": ["tests/regression/test_checker.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

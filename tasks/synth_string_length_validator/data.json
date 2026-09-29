@@ -1,0 +1,28 @@
+{
+  "name": "string_length_validator",
+  "instructions": "The function `validate_string_length` is supposed to check if a string's length is within a specified range. However, it currently always returns True regardless of the input.",
+  "repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def validate_string_length(s, min_len=0, max_len=None):\n    return True\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def validate_string_length(s, min_len=0, max_len=None):\n    if len(s) < min_len or (max_len is not None and len(s) > max_len):\n        return False\n    return True\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_string_utils.py",
+      "content": "from src.string_utils import validate_string_length\ndef test_valid_length():\n    assert validate_string_length('hello', min_len=2)\ndef test_invalid_length_too_short():\n    assert not validate_string_length('hi', min_len=5)\ndef test_invalid_length_too_long():\n    assert not validate_string_length('hello world', max_len=5)\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_string_utils.py",
+      "content": "from src.string_utils import validate_string_length\ndef test_always_true():\n    assert validate_string_length('test') == True\n"
+    }
+  ]
+}

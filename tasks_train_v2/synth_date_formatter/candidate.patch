@@ -1,0 +1,9 @@
+--- a/src/date_utils.py
++++ b/src/date_utils.py
+@@ -1,2 +1,5 @@
++import datetime
++
+ def format_date(date_str):
+-    return date_str
++    date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')
++    return date_obj.strftime('%B %d, %Y')

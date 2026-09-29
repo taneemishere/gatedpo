@@ -1,0 +1,28 @@
+{
+  "name": "dict_key_missing",
+  "instructions": "The function 'get_user_age' is supposed to return the age of a user given their name. However, it currently raises a KeyError if the user's name is not found in the dictionary. The function should return None instead.",
+  "repo_files": [
+    {
+      "path": "src/user_info.py",
+      "content": "def get_user_age(users, name):\n    return users[name]\n\nusers = {\n    \"Alice\": 30,\n    \"Bob\": 25\n}"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/user_info.py",
+      "content": "def get_user_age(users, name):\n    return users.get(name, None)\n\nusers = {\n    \"Alice\": 30,\n    \"Bob\": 25\n}"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_get_user_age.py",
+      "content": "import unittest\nfrom src.user_info import get_user_age\n\nclass TestGetUserAge(unittest.TestCase):\n    def test_existing_user(self):\n        self.assertEqual(get_user_age({\"Alice\": 30}, \"Alice\"), 30)\n\nif __name__ == '__main__':\n    unittest.main()"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_get_user_age.py",
+      "content": "import unittest\nfrom src.user_info import get_user_age\n\nclass TestGetUserAge(unittest.TestCase):\n    def test_non_existent_user(self):\n        self.assertIsNone(get_user_age({}, \"Charlie\"))\n\nif __name__ == '__main__':\n    unittest.main()"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+The function 'calculate_area' is supposed to return the area of a rectangle but currently it does not have a return statement. It should return the product of its two parameters.

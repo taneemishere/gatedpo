@@ -1,0 +1,1 @@
+{"id": "synth_date_formatter", "name": "synth_date_formatter", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/date_utils.py"], "visible_tests": ["tests/visible/test_format_date.py"], "regression_tests": ["tests/regression/test_format_date.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

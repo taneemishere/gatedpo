@@ -1,0 +1,12 @@
+# Run-time requirements for GateDPO training and inference.
+# Install in the training environment after the base environment is ready.
+# The exact versions should match the CUDA/driver setup on the target GPU.
+
+# Training
+trl
+peft
+accelerate
+unidiff
+
+# Serving
+vllm

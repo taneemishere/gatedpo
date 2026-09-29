@@ -1,0 +1,28 @@
+{
+  "name": "integer_division",
+  "instructions": "The function `divide_numbers` is intended to perform integer division but instead performs floor division. Fix the function so that it correctly performs integer division.",
+  "repo_files": [
+    {
+      "path": "src/division.py",
+      "content": "def divide_numbers(a, b):\n    return a // b\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/division.py",
+      "content": "def divide_numbers(a, b):\n    return int(a / b)\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_division.py",
+      "content": "import unittest\nfrom src.division import divide_numbers\nclass TestDivision(unittest.TestCase):\n    def test_division(self):\n        self.assertEqual(divide_numbers(10, 3), 3)\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_division.py",
+      "content": "import unittest\nfrom src.division import divide_numbers\nclass TestRegression(unittest.TestCase):\n    def test_regression(self):\n        self.assertNotEqual(divide_numbers(10, 3), 4)\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

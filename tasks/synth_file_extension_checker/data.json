@@ -1,0 +1,28 @@
+{
+  "name": "file_extension_checker",
+  "instructions": "The function 'check_file_extension' is supposed to verify if a given file path has a specific extension. However, it currently returns True for any file that contains the specified extension anywhere in its path, not just at the end. Fix this so that it correctly checks only the end of the file path.",
+  "repo_files": [
+    {
+      "path": "src/checker.py",
+      "content": "def check_file_extension(file_path, extension):\n    return extension in file_path\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/checker.py",
+      "content": "def check_file_extension(file_path, extension):\n    return file_path.endswith(extension)\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_checker.py",
+      "content": "from src.checker import check_file_extension\n\ndef test_check_file_extension():\n    assert check_file_extension('document.txt', '.txt') == True\n    assert check_file_extension('image.png', '.jpg') == False\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_checker.py",
+      "content": "from src.checker import check_file_extension\n\ndef test_regression_check_file_extension():\n    assert check_file_extension('archive.tar.gz', '.gz') == True\n    assert check_file_extension('backup.zip', '.zip') == True\n    assert check_file_extension('temp_file.tmp', '.tmp') == True\n"
+    }
+  ]
+}

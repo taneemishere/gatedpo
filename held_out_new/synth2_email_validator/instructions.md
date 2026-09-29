@@ -1,0 +1,1 @@
+There is a bug in the `validate_email` function where it does not correctly handle email addresses with multiple consecutive dots before the '@' symbol. The function should return False for such cases. Additionally, the `is_valid_domain` function has a logical error that needs to be fixed.

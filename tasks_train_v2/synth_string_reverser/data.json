@@ -1,0 +1,28 @@
+{
+  "name": "string_reverser",
+  "instructions": "There is a function `reverse_string` that takes a string as input but returns an incorrect reversed version of the string. The desired behavior is to return the reversed string correctly.",
+  "repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def reverse_string(s):\n    return s[::-1][::-1]\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def reverse_string(s):\n    return s[::-1]\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_reverse_string.py",
+      "content": "from src.string_utils import reverse_string\n\ndef test_reverse_string():\n    assert reverse_string('hello') == 'olleh'\n    assert reverse_string('world') == 'dlrow'\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_reverse_string_regression.py",
+      "content": "from src.string_utils import reverse_string\n\ndef test_reverse_string_regression():\n    assert reverse_string('racecar') == 'racecar'\n    assert reverse_string('noon') == 'noon'\n"
+    }
+  ]
+}

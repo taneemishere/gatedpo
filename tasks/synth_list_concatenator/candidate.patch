@@ -1,0 +1,6 @@
+--- a/list_utils.py
++++ b/list_utils.py
+@@ -1,2 +1,2 @@
+ def concatenate_lists(list1, list2):
+-    return list1
++    return list1 + list2

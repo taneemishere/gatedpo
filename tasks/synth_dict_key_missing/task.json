@@ -1,0 +1,1 @@
+{"id": "synth_dict_key_missing", "name": "synth_dict_key_missing", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/user_info.py"], "visible_tests": ["tests/visible/test_get_user_age.py"], "regression_tests": ["tests/regression/test_get_user_age.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

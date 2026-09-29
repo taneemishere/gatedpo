@@ -1,0 +1,28 @@
+{
+  "name": "missing_return_value",
+  "instructions": "The function 'calculate_area' is supposed to return the area of a rectangle but currently it does not have a return statement. It should return the product of its two parameters.",
+  "repo_files": [
+    {
+      "path": "src/geometry.py",
+      "content": "def calculate_area(width, height):\n    area = width * height\n    # Missing return statement\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/geometry.py",
+      "content": "def calculate_area(width, height):\n    area = width * height\n    return area\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_geometry.py",
+      "content": "import unittest\nfrom src.geometry import calculate_area\n\nclass TestGeometry(unittest.TestCase):\n    def test_calculate_area(self):\n        self.assertEqual(calculate_area(3, 4), 12)\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_geometry.py",
+      "content": "import unittest\nfrom src.geometry import calculate_area\n\nclass TestGeometryRegression(unittest.TestCase):\n    def test_calculate_area_with_zero(self):\n        self.assertEqual(calculate_area(0, 5), 0)\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

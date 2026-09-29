@@ -1,0 +1,6 @@
+--- a/src/string_utils.py
++++ b/src/string_utils.py
+@@ -1,2 +1,2 @@
+ def concatenate_strings(a, b):
+-    return a
++    return a + b

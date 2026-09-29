@@ -1,0 +1,36 @@
+{
+  "name": "file_uploader",
+  "instructions": "The `upload_file` function in `src/file_uploader.py` incorrectly handles file extensions when determining whether to compress the file before uploading. It should check if the file extension is '.txt' or '.log' before deciding to compress it. Currently, any file with a '.' in its name will be compressed, which is incorrect.",
+  "repo_files": [
+    {
+      "path": "src/file_uploader.py",
+      "content": "import os\n\ndef upload_file(file_path):\n    file_name = os.path.basename(file_path)\n    if '.' in file_name:\n        # Incorrectly compresses all files with a '.'\n        compressed_file_path = file_path + '.gz'\n        # Simulate compression\n        open(compressed_file_path, 'w').close()\n        print(f'Compressed {file_path} to {compressed_file_path}')\n    else:\n        print(f'Uploading {file_path}')\n"
+    },
+    {
+      "path": "tests/visible/test_upload_file.py",
+      "content": "from src.file_uploader import upload_file\n\ndef test_upload_file_no_compression():\n    upload_file('example.txt')\n\ndef test_upload_file_with_compression():\n    upload_file('example.log')"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/file_uploader.py",
+      "content": "import os\n\ndef upload_file(file_path):\n    file_name = os.path.basename(file_path)\n    _, ext = os.path.splitext(file_name)\n    if ext.lower() in ['.txt', '.log']:\n        # Correctly compresses .txt and .log files\n        compressed_file_path = file_path + '.gz'\n        # Simulate compression\n        open(compressed_file_path, 'w').close()\n        print(f'Compressed {file_path} to {compressed_file_path}')\n    else:\n        print(f'Uploading {file_path}')\n"
+    },
+    {
+      "path": "tests/visible/test_upload_file.py",
+      "content": "from src.file_uploader import upload_file\n\ndef test_upload_file_no_compression():\n    upload_file('example.txt')\n\ndef test_upload_file_with_compression():\n    upload_file('example.log')"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_upload_file.py",
+      "content": "from src.file_uploader import upload_file\n\ndef test_upload_file_no_compression():\n    upload_file('example.txt')\n\ndef test_upload_file_with_compression():\n    upload_file('example.log')"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_upload_file_regression.py",
+      "content": "from src.file_uploader import upload_file\n\ndef test_upload_file_no_compression_regression():\n    # Should not compress non-text/log files\n    upload_file('image.png')\n\ndef test_upload_file_with_compression_regression():\n    # Should compress text/log files\n    upload_file('report.txt')"
+    }
+  ]
+}

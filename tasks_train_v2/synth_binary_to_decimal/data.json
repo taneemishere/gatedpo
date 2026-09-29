@@ -1,0 +1,28 @@
+{
+  "name": "binary_to_decimal",
+  "instructions": "A function `binary_to_decimal` is supposed to convert a binary string to its decimal equivalent but it currently returns the binary string unchanged.",
+  "repo_files": [
+    {
+      "path": "src/binary_conversion.py",
+      "content": "def binary_to_decimal(binary_str):\n    return binary_str\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/binary_conversion.py",
+      "content": "def binary_to_decimal(binary_str):\n    return int(binary_str, 2)\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_binary_to_decimal.py",
+      "content": "from src.binary_conversion import binary_to_decimal\n\ndef test_binary_to_decimal():\n    assert binary_to_decimal('101') == 5\n    assert binary_to_decimal('1111') == 15\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_binary_to_decimal.py",
+      "content": "from src.binary_conversion import binary_to_decimal\n\ndef test_binary_to_decimal_unchanged():\n    assert binary_to_decimal('101') != '101'\n    assert binary_to_decimal('1111') != '1111'\n"
+    }
+  ]
+}

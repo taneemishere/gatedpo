@@ -1,0 +1,28 @@
+{
+  "name": "integer_incrementer",
+  "instructions": "The function `increment_integer` is intended to take an integer as input and return the incremented value. However, it currently returns the original value instead.",
+  "repo_files": [
+    {
+      "path": "src/integer_incrementer.py",
+      "content": "def increment_integer(num):\n    return num\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/integer_incrementer.py",
+      "content": "def increment_integer(num):\n    return num + 1\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_increment_integer.py",
+      "content": "import unittest\nfrom src.integer_incrementer import increment_integer\nclass TestIncrementInteger(unittest.TestCase):\n    def test_increment_integer(self):\n        self.assertEqual(increment_integer(5), 6)\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_increment_integer_regression.py",
+      "content": "import unittest\nfrom src.integer_incrementer import increment_integer\nclass TestIncrementIntegerRegression(unittest.TestCase):\n    def test_increment_integer_regression(self):\n        self.assertNotEqual(increment_integer(0), 0)\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

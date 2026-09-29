@@ -1,0 +1,1 @@
+The function 'get_user_age' is supposed to return the age of a user given their name. However, it currently raises a KeyError if the user's name is not found in the dictionary. The function should return None instead.

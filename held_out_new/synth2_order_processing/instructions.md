@@ -1,0 +1,1 @@
+There is a bug in the `process_order` function where it does not correctly handle orders with negative quantities. The function should raise a ValueError if the order quantity is negative. Currently, it processes such orders without any checks.

@@ -1,0 +1,1 @@
+The function 'square_list' is supposed to return a new list where each element is squared. However, it currently returns the original list instead.

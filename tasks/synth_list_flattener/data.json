@@ -1,0 +1,28 @@
+{
+  "name": "list_flattener",
+  "instructions": "The 'flatten_list' function is supposed to take a nested list and return a flat list containing all the elements. However, it currently returns the original list unchanged.",
+  "repo_files": [
+    {
+      "path": "src/list_utils.py",
+      "content": "def flatten_list(nested_list):\n    return nested_list\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/list_utils.py",
+      "content": "def flatten_list(nested_list):\n    result = []\n    for item in nested_list:\n        if isinstance(item, list):\n            result.extend(flatten_list(item))\n        else:\n            result.append(item)\n    return result\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_flatten_list.py",
+      "content": "import unittest\nfrom src.list_utils import flatten_list\n\nclass TestFlattenList(unittest.TestCase):\n    def test_empty_list(self):\n        self.assertEqual(flatten_list([]), [])\n\n    def test_single_element(self):\n        self.assertEqual(flatten_list([1]), [1])\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_flatten_list.py",
+      "content": "import unittest\nfrom src.list_utils import flatten_list\n\nclass TestFlattenList(unittest.TestCase):\n    def test_nested_list(self):\n        self.assertEqual(flatten_list([[1, 2], [3, 4]]), [1, 2, 3, 4])\n\n    def test_mixed_elements(self):\n        self.assertEqual(flatten_list([1, [2, 3], 4]), [1, 2, 3, 4])\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "string_concatenator",
+  "instructions": "The function `concatenate_strings` is intended to concatenate two strings provided as arguments but it currently returns the first string instead of the concatenated result.",
+  "repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def concatenate_strings(a, b):\n    return a\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def concatenate_strings(a, b):\n    return a + b\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_string_utils.py",
+      "content": "from src.string_utils import concatenate_strings\n\ndef test_concatenate_strings():\n    assert concatenate_strings('Hello', 'World') == 'HelloWorld'\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_string_utils.py",
+      "content": "from src.string_utils import concatenate_strings\n\ndef test_concatenate_strings_with_space():\n    assert concatenate_strings('Hello', ' World') == 'Hello World'\n"
+    }
+  ]
+}

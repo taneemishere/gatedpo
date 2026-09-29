@@ -1,0 +1,28 @@
+{
+  "name": "order_processing",
+  "instructions": "There is a bug in the `process_order` function where it does not correctly handle orders with negative quantities. The function should raise a ValueError if the order quantity is negative. Currently, it processes such orders without any checks.",
+  "repo_files": [
+    {
+      "path": "src/order_processor.py",
+      "content": "def process_order(order_id, quantity):\n    total_cost = quantity * 10\n    print(f'Processed order {order_id} with total cost {total_cost}')\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/order_processor.py",
+      "content": "def process_order(order_id, quantity):\n    if quantity < 0:\n        raise ValueError('Order quantity cannot be negative')\n    total_cost = quantity * 10\n    print(f'Processed order {order_id} with total cost {total_cost}')\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_order_processor.py",
+      "content": "import unittest\nfrom src.order_processor import process_order\n\nclass TestOrderProcessor(unittest.TestCase):\n    def test_process_order_positive_quantity(self):\n        process_order(123, 5)\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_order_processor.py",
+      "content": "import unittest\nfrom src.order_processor import process_order\n\nclass TestOrderProcessor(unittest.TestCase):\n    def test_process_order_negative_quantity(self):\n        with self.assertRaises(ValueError):\n            process_order(123, -5)\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

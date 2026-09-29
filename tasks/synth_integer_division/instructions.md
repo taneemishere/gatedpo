@@ -1,0 +1,1 @@
+The function `divide_numbers` is intended to perform integer division but instead performs floor division. Fix the function so that it correctly performs integer division.

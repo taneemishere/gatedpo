@@ -1,0 +1,1 @@
+The function 'sort_list' is intended to sort a list in ascending order but currently does not work correctly. It should return a sorted list without modifying the original list.

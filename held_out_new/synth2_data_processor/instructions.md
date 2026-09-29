@@ -1,0 +1,1 @@
+There is a bug in the `process_data` function where it does not correctly handle data entries that contain null values. The function should skip processing such entries and continue with the next ones. Currently, it raises an exception when encountering a null value.

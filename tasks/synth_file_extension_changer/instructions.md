@@ -1,0 +1,1 @@
+The function `change_file_extension` is supposed to change the extension of a given file path to a new specified extension. However, it currently always returns the original file path without changing the extension.

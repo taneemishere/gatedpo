@@ -1,0 +1,15 @@
+--- a/src/data_analyzer.py
++++ b/src/data_analyzer.py
+@@ -3,8 +3,12 @@
+         self.data = data
+ 
+     def _calculate_average(self):
++        if not self.data:
++            return None
+         return sum(self.data) / len(self.data)
+ 
+     def get_average(self):
+         average = self._calculate_average()
++        if average is None:
++            return 'No data to calculate average'
+         return f'The average is {average}'

@@ -1,0 +1,28 @@
+{
+  "name": "string_length_checker",
+  "instructions": "The function 'check_string_length' is supposed to return True if the length of the input string is between 5 and 10 characters, inclusive. However, it currently returns False for all strings.",
+  "repo_files": [
+    {
+      "path": "utils/string_utils.py",
+      "content": "def check_string_length(s):\n    return False\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "utils/string_utils.py",
+      "content": "def check_string_length(s):\n    return 5 <= len(s) <= 10\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_string_length.py",
+      "content": "from utils.string_utils import check_string_length\n\ndef test_check_string_length_true():\n    assert check_string_length('hello') == True\n\n\ndef test_check_string_length_false_short():\n    assert check_string_length('hi') == False\n\n\ndef test_check_string_length_false_long():\n    assert check_string_length('hello world') == False\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_string_length.py",
+      "content": "from utils.string_utils import check_string_length\n\ndef test_check_string_length_regression():\n    assert check_string_length('abcdefg') == True\n    assert check_string_length('abcde') == True\n    assert check_string_length('abcdefghij') == True\n    assert check_string_length('abcd') == False\n    assert check_string_length('abcdefghijk') == False\n"
+    }
+  ]
+}

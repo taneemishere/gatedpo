@@ -1,0 +1,340 @@
+{
+  "suite": "benchmarks/rl_pilot_suite_train.json",
+  "model": "gatedpo_r2",
+  "num_samples": 12,
+  "repair_samples": 4,
+  "repair_states": 8,
+  "strategy": "all_edges",
+  "intra_gate": true,
+  "progress_pairs": true,
+  "tasks": 26,
+  "pairs_total": 194,
+  "pair_type_hist": {
+    "intra_gate": 46,
+    "inter_gate": 131,
+    "progress": 17
+  },
+  "turn1_terminal_gate_hist": {
+    "visible_tests": 87,
+    "release_gate_regressions": 12,
+    "patch_applies": 19,
+    "python_ast": 6,
+    "promoted": 188
+  },
+  "rejected_arm_gate_hist": {
+    "visible_tests": 141,
+    "release_gate_regressions": 5,
+    "patch_applies": 22,
+    "python_ast": 26
+  },
+  "per_task": {
+    "markdown_link_extractor": {
+      "task_id": "markdown_link_extractor",
+      "turn1_terminal_hist": {
+        "visible_tests": 12
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "range_parser": {
+      "task_id": "range_parser",
+      "turn1_terminal_hist": {
+        "visible_tests": 8,
+        "release_gate_regressions": 4
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "smoke_markdown_parser": {
+      "task_id": "smoke_markdown_parser",
+      "turn1_terminal_hist": {
+        "patch_applies": 7,
+        "visible_tests": 4,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "string_slugifier": {
+      "task_id": "string_slugifier",
+      "turn1_terminal_hist": {
+        "patch_applies": 2,
+        "visible_tests": 8,
+        "release_gate_regressions": 2
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 13
+    },
+    "synth2_data_analyzer": {
+      "task_id": "synth2_data_analyzer",
+      "turn1_terminal_hist": {
+        "visible_tests": 10,
+        "python_ast": 2
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "synth2_log_analyzer": {
+      "task_id": "synth2_log_analyzer",
+      "turn1_terminal_hist": {
+        "patch_applies": 6,
+        "visible_tests": 3,
+        "promoted": 3
+      },
+      "turn1_promoted": 3,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 14
+    },
+    "synth_binary_to_decimal": {
+      "task_id": "synth_binary_to_decimal",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_date_formatter": {
+      "task_id": "synth_date_formatter",
+      "turn1_terminal_hist": {
+        "visible_tests": 8,
+        "promoted": 4
+      },
+      "turn1_promoted": 4,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "synth_dict_key_missing": {
+      "task_id": "synth_dict_key_missing",
+      "turn1_terminal_hist": {
+        "promoted": 10,
+        "python_ast": 2
+      },
+      "turn1_promoted": 10,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 2,
+      "pairs": 15
+    },
+    "synth_file_extension_changer": {
+      "task_id": "synth_file_extension_changer",
+      "turn1_terminal_hist": {
+        "promoted": 6,
+        "visible_tests": 6
+      },
+      "turn1_promoted": 6,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 6,
+      "pairs": 16
+    },
+    "synth_file_extension_checker": {
+      "task_id": "synth_file_extension_checker",
+      "turn1_terminal_hist": {
+        "promoted": 9,
+        "visible_tests": 3
+      },
+      "turn1_promoted": 9,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 3,
+      "pairs": 12
+    },
+    "synth_function_argument_error": {
+      "task_id": "synth_function_argument_error",
+      "turn1_terminal_hist": {
+        "promoted": 5,
+        "release_gate_regressions": 6,
+        "patch_applies": 1
+      },
+      "turn1_promoted": 5,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 7,
+      "pairs": 5
+    },
+    "synth_integer_division": {
+      "task_id": "synth_integer_division",
+      "turn1_terminal_hist": {
+        "visible_tests": 12
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 0
+    },
+    "synth_integer_incrementer": {
+      "task_id": "synth_integer_incrementer",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_list_concatenator": {
+      "task_id": "synth_list_concatenator",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_list_flattener": {
+      "task_id": "synth_list_flattener",
+      "turn1_terminal_hist": {
+        "promoted": 10,
+        "visible_tests": 2
+      },
+      "turn1_promoted": 10,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 2,
+      "pairs": 4
+    },
+    "synth_list_flattener_1": {
+      "task_id": "synth_list_flattener_1",
+      "turn1_terminal_hist": {
+        "patch_applies": 3,
+        "promoted": 8,
+        "visible_tests": 1
+      },
+      "turn1_promoted": 8,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 4,
+      "pairs": 12
+    },
+    "synth_list_flattener_2": {
+      "task_id": "synth_list_flattener_2",
+      "turn1_terminal_hist": {
+        "promoted": 11,
+        "visible_tests": 1
+      },
+      "turn1_promoted": 11,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 1,
+      "pairs": 11
+    },
+    "synth_list_sorter": {
+      "task_id": "synth_list_sorter",
+      "turn1_terminal_hist": {
+        "promoted": 5,
+        "visible_tests": 7
+      },
+      "turn1_promoted": 5,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 7,
+      "pairs": 14
+    },
+    "synth_list_squarer": {
+      "task_id": "synth_list_squarer",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_missing_return_value": {
+      "task_id": "synth_missing_return_value",
+      "turn1_terminal_hist": {
+        "promoted": 11,
+        "python_ast": 1
+      },
+      "turn1_promoted": 11,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 1,
+      "pairs": 6
+    },
+    "synth_string_concatenator": {
+      "task_id": "synth_string_concatenator",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_string_inverter": {
+      "task_id": "synth_string_inverter",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_string_length_checker": {
+      "task_id": "synth_string_length_checker",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_string_length_validator": {
+      "task_id": "synth_string_length_validator",
+      "turn1_terminal_hist": {
+        "promoted": 10,
+        "visible_tests": 2
+      },
+      "turn1_promoted": 10,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 2,
+      "pairs": 12
+    },
+    "synth_string_reverser": {
+      "task_id": "synth_string_reverser",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    }
+  },
+  "elapsed_seconds": 173.5
+}

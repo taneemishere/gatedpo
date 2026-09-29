@@ -1,0 +1,1 @@
+{"id": "synth_integer_division", "name": "synth_integer_division", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/division.py"], "visible_tests": ["tests/visible/test_division.py"], "regression_tests": ["tests/regression/test_division.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

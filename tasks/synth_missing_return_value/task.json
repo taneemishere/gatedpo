@@ -1,0 +1,1 @@
+{"id": "synth_missing_return_value", "name": "synth_missing_return_value", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/geometry.py"], "visible_tests": ["tests/visible/test_geometry.py"], "regression_tests": ["tests/regression/test_geometry.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

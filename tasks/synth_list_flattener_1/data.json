@@ -1,0 +1,28 @@
+{
+  "name": "list_flattener",
+  "instructions": "There is a function `flatten_list` that takes a nested list as input and returns a flattened version of it. However, the current implementation does not handle empty lists correctly, causing an error when trying to flatten them.",
+  "repo_files": [
+    {
+      "path": "flattener.py",
+      "content": "def flatten_list(nested_list):\n    result = []\n    for item in nested_list:\n        if isinstance(item, list):\n            result.extend(flatten_list(item))\n        else:\n            result.append(item)\n    return result\n\n# Example usage\nnested_list = [1, [2, 3], [4, [5, 6]]]\nprint(flatten_list(nested_list))"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "flattener.py",
+      "content": "def flatten_list(nested_list):\n    result = []\n    for item in nested_list:\n        if isinstance(item, list):\n            result.extend(flatten_list(item))\n        elif item is not None:\n            result.append(item)\n    return result\n\n# Example usage\nnested_list = [1, [2, 3], [4, [5, 6]]]\nprint(flatten_list(nested_list))"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_flatten_list.py",
+      "content": "import flattener\n\ndef test_flatten_list():\n    assert flattener.flatten_list([1, [2, 3], [4, [5, 6]]]) == [1, 2, 3, 4, 5, 6]"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_flatten_list_empty.py",
+      "content": "import flattener\n\ndef test_flatten_list_empty():\n    assert flattener.flatten_list([]) == []"
+    }
+  ]
+}

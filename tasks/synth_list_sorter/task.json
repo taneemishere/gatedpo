@@ -1,0 +1,1 @@
+{"id": "synth_list_sorter", "name": "synth_list_sorter", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/list_sorter.py"], "visible_tests": ["tests/visible/test_list_sorter.py"], "regression_tests": ["tests/regression/test_list_sorter.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

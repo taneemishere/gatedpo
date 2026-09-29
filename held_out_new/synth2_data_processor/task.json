@@ -1,0 +1,1 @@
+{"id": "data_processor", "name": "data_processor", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/data_processor.py", "src/utils.py"], "visible_tests": ["tests/visible/test_data_processor.py"], "regression_tests": ["tests/regression/test_data_processor.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

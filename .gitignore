@@ -1,0 +1,25 @@
+# Generated run artifacts and evidence (too large / regenerate locally)
+.patchproof_runs/
+.gatedpo_runs/
+data/pairs_*.jsonl
+outputs/
+logs/
+
+# Public write-up and figures (published on the site, not the repo)
+report/
+
+# Pulled GateGRPO artifacts (separate project's evidence trail)
+gategrpo_vllm_pulls/
+
+# Python junk
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# macOS junk
+.DS_Store
+._*

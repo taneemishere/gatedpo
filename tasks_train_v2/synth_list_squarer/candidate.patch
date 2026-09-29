@@ -1,0 +1,6 @@
+--- a/src/list_squarer.py
++++ b/src/list_squarer.py
+@@ -1,2 +1,2 @@
+ def square_list(lst):
+-    return lst
++    return [x**2 for x in lst]

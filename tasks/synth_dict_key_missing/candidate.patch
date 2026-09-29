@@ -1,0 +1,9 @@
+--- a/src/user_info.py
++++ b/src/user_info.py
+@@ -1,5 +1,5 @@
+ def get_user_age(users, name):
+-    return users[name]
++    return users.get(name, None)
+ 
+ users = {
+     "Alice": 30,

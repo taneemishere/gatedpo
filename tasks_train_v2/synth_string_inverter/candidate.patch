@@ -1,0 +1,6 @@
+--- a/src/string_utils.py
++++ b/src/string_utils.py
+@@ -1,2 +1,2 @@
+ def invert_string(s):
+-    return s
++    return s[::-1]

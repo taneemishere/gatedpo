@@ -1,0 +1,1 @@
+A function `format_date` is supposed to convert a date string from 'YYYY-MM-DD' format to 'Month DD, YYYY'. However, it currently returns the input date as is without any formatting.

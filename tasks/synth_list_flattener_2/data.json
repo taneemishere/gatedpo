@@ -1,0 +1,28 @@
+{
+  "name": "list_flattener",
+  "instructions": "The function 'flatten_list' is supposed to take a nested list and return a flat list containing all elements from the nested lists, but it's not working correctly. It should handle arbitrary levels of nesting.",
+  "repo_files": [
+    {
+      "path": "src/list_utils.py",
+      "content": "def flatten_list(nested_list):\n    result = []\n    for item in nested_list:\n        if isinstance(item, list):\n            result.extend(flatten_list(item))\n        else:\n            result.append(item)\n    return result\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/list_utils.py",
+      "content": "def flatten_list(nested_list):\n    result = []\n    for item in nested_list:\n        if isinstance(item, list):\n            result += flatten_list(item)\n        else:\n            result.append(item)\n    return result\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_flatten_list.py",
+      "content": "from src.list_utils import flatten_list\n\nimport unittest\n\nclass TestFlattenList(unittest.TestCase):\n    def test_flatten(self):\n        self.assertEqual(flatten_list([1, [2, 3], [4, [5, 6]]]), [1, 2, 3, 4, 5, 6])\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_flatten_list.py",
+      "content": "from src.list_utils import flatten_list\n\nimport unittest\n\nclass TestFlattenList(unittest.TestCase):\n    def test_not_nested(self):\n        self.assertEqual(flatten_list([1, 2, 3]), [1, 2, 3])\n\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+--- a/src/string_utils.py
++++ b/src/string_utils.py
+@@ -1,2 +1,4 @@
+ def validate_string_length(s, min_len=0, max_len=None):
++    if len(s) < min_len or (max_len is not None and len(s) > max_len):
++        return False
+     return True

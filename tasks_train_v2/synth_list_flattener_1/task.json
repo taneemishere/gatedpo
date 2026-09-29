@@ -1,0 +1,1 @@
+{"id": "synth_list_flattener_1", "name": "synth_list_flattener_1", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["flattener.py"], "visible_tests": ["tests/visible/test_flatten_list.py"], "regression_tests": ["tests/regression/test_flatten_list_empty.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

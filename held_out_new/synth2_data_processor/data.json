@@ -1,0 +1,36 @@
+{
+  "name": "data_processor",
+  "instructions": "There is a bug in the `process_data` function where it does not correctly handle data entries that contain null values. The function should skip processing such entries and continue with the next ones. Currently, it raises an exception when encountering a null value.",
+  "repo_files": [
+    {
+      "path": "src/data_processor.py",
+      "content": "def process_data(data):\n    results = []\n    for entry in data:\n        result = calculate_value(entry)\n        results.append(result)\n    return results\n\ndef calculate_value(entry):\n    return entry * 2"
+    },
+    {
+      "path": "src/utils.py",
+      "content": ""
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/data_processor.py",
+      "content": "def process_data(data):\n    results = []\n    for entry in data:\n        if entry is None:\n            continue\n        result = calculate_value(entry)\n        results.append(result)\n    return results\n\ndef calculate_value(entry):\n    return entry * 2"
+    },
+    {
+      "path": "src/utils.py",
+      "content": ""
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_data_processor.py",
+      "content": "import pytest\nfrom src.data_processor import process_data\n\ndef test_process_data_with_null_values():\n    data = [1, 2, None, 4]\n    expected_result = [2, 4, 8]\n    assert process_data(data) == expected_result"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_data_processor.py",
+      "content": "import pytest\nfrom src.data_processor import process_data\n\ndef test_process_data_without_null_values():\n    data = [1, 2, 3, 4]\n    expected_result = [2, 4, 6, 8]\n    assert process_data(data) == expected_result"
+    }
+  ]
+}

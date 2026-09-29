@@ -1,0 +1,1 @@
+The 'flatten_list' function is supposed to take a nested list and return a flat list containing all the elements. However, it currently returns the original list unchanged.

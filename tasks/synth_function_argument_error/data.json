@@ -1,0 +1,28 @@
+{
+  "name": "function_argument_error",
+  "instructions": "A function is being called with incorrect arguments. The function expects two integers but receives a string and an integer instead. Fix the argument passed to the function.",
+  "repo_files": [
+    {
+      "path": "src/addition.py",
+      "content": "def add_numbers(a, b):\n    return a + b\n\ndef main():\n    result = add_numbers('5', 3)\n    print(result)\n\nif __name__ == '__main__':\n    main()"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/addition.py",
+      "content": "def add_numbers(a, b):\n    return a + b\n\ndef main():\n    result = add_numbers(5, 3)\n    print(result)\n\nif __name__ == '__main__':\n    main()"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_addition.py",
+      "content": "from src.addition import main\nimport pytest\n\ndef test_main(capsys):\n    main()\n    captured = capsys.readouterr()\n    assert '8' in captured.out"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_addition.py",
+      "content": "from src.addition import add_numbers\nimport pytest\n\ndef test_add_numbers_type_error():\n    with pytest.raises(TypeError):\n        add_numbers('5', 3)"
+    }
+  ]
+}

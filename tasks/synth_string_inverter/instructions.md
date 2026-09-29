@@ -1,0 +1,1 @@
+The function `invert_string` is supposed to reverse the input string but currently does not work correctly. It should return the reversed version of the input string.

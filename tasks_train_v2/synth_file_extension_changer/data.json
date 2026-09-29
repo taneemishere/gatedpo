@@ -1,0 +1,28 @@
+{
+  "name": "file_extension_changer",
+  "instructions": "The function `change_file_extension` is supposed to change the extension of a given file path to a new specified extension. However, it currently always returns the original file path without changing the extension.",
+  "repo_files": [
+    {
+      "path": "src/file_utils.py",
+      "content": "def change_file_extension(file_path, new_extension):\n    return file_path\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/file_utils.py",
+      "content": "import os\ndef change_file_extension(file_path, new_extension):\n    _, ext = os.path.splitext(file_path)\n    return file_path.replace(ext, '.' + new_extension)\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_change_file_extension.py",
+      "content": "from src.file_utils import change_file_extension\ndef test_change_file_extension():\n    assert change_file_extension('example.txt', 'csv') == 'example.csv'\n    assert change_file_extension('example.docx', 'pdf') == 'example.pdf'\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_change_file_extension.py",
+      "content": "from src.file_utils import change_file_extension\ndef test_change_file_extension_no_change():\n    assert change_file_extension('example.txt', 'txt') == 'example.txt'\n"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "list_concatenator",
+  "instructions": "There is a function named 'concatenate_lists' in list_utils.py that is supposed to concatenate two lists but instead it returns the first list. The function should return the concatenation of both lists.",
+  "repo_files": [
+    {
+      "path": "list_utils.py",
+      "content": "def concatenate_lists(list1, list2):\n    return list1\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "list_utils.py",
+      "content": "def concatenate_lists(list1, list2):\n    return list1 + list2\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_concatenate_lists.py",
+      "content": "from list_utils import concatenate_lists\n\ndef test_concatenate_lists():\n    assert concatenate_lists([1, 2], [3, 4]) == [1, 2, 3, 4]\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_concatenate_lists.py",
+      "content": "from list_utils import concatenate_lists\n\ndef test_concatenate_lists_regression():\n    assert concatenate_lists([1, 2], [3, 4]) != [1, 2]\n"
+    }
+  ]
+}

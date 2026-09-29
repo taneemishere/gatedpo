@@ -1,0 +1,1 @@
+There is a function named 'concatenate_lists' in list_utils.py that is supposed to concatenate two lists but instead it returns the first list. The function should return the concatenation of both lists.

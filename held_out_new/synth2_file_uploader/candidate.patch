@@ -1,0 +1,14 @@
+--- a/src/file_uploader.py
++++ b/src/file_uploader.py
+@@ -2,8 +2,9 @@
+ 
+ def upload_file(file_path):
+     file_name = os.path.basename(file_path)
+-    if '.' in file_name:
+-        # Incorrectly compresses all files with a '.'
++    _, ext = os.path.splitext(file_name)
++    if ext.lower() in ['.txt', '.log']:
++        # Correctly compresses .txt and .log files
+         compressed_file_path = file_path + '.gz'
+         # Simulate compression
+         open(compressed_file_path, 'w').close()

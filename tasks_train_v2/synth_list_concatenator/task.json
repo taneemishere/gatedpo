@@ -1,0 +1,1 @@
+{"id": "synth_list_concatenator", "name": "synth_list_concatenator", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["list_utils.py"], "visible_tests": ["tests/visible/test_concatenate_lists.py"], "regression_tests": ["tests/regression/test_concatenate_lists.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

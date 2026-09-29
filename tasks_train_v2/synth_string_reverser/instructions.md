@@ -1,0 +1,1 @@
+There is a function `reverse_string` that takes a string as input but returns an incorrect reversed version of the string. The desired behavior is to return the reversed string correctly.

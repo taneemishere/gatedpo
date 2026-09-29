@@ -1,0 +1,1 @@
+There is a bug in the `DataAnalyzer` class where the `_calculate_average` method does not handle cases when the input list is empty. This causes a division by zero error. The method should return None when the list is empty.

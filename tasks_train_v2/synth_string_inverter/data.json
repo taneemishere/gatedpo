@@ -1,0 +1,28 @@
+{
+  "name": "string_inverter",
+  "instructions": "The function `invert_string` is supposed to reverse the input string but currently does not work correctly. It should return the reversed version of the input string.",
+  "repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def invert_string(s):\n    return s\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/string_utils.py",
+      "content": "def invert_string(s):\n    return s[::-1]\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_string_inverter.py",
+      "content": "import unittest\nfrom src.string_utils import invert_string\nclass TestStringInverter(unittest.TestCase):\n    def test_invert_string(self):\n        self.assertEqual(invert_string('hello'), 'olleh')\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_string_inverter.py",
+      "content": "import unittest\nfrom src.string_utils import invert_string\nclass TestStringInverterRegressions(unittest.TestCase):\n    def test_empty_string(self):\n        self.assertEqual(invert_string(''), '')\n    def test_single_char(self):\n        self.assertEqual(invert_string('a'), 'a')\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

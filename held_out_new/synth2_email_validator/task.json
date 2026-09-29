@@ -1,0 +1,1 @@
+{"id": "email_validator", "name": "email_validator", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/email_validator.py"], "visible_tests": ["tests/visible/test_email_validator.py"], "regression_tests": ["tests/regression/test_email_validator.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

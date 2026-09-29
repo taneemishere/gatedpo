@@ -1,0 +1,109 @@
+{
+  "name": "rl_pilot_suite_train",
+  "cases": [
+    {
+      "id": "markdown_link_extractor",
+      "task_dir": "tasks_train_v2/markdown_link_extractor"
+    },
+    {
+      "id": "range_parser",
+      "task_dir": "tasks_train_v2/range_parser"
+    },
+    {
+      "id": "smoke_markdown_parser",
+      "task_dir": "tasks_train_v2/smoke_markdown_parser"
+    },
+    {
+      "id": "string_slugifier",
+      "task_dir": "tasks_train_v2/string_slugifier"
+    },
+    {
+      "id": "synth2_data_analyzer",
+      "task_dir": "tasks_train_v2/synth2_data_analyzer"
+    },
+    {
+      "id": "synth2_log_analyzer",
+      "task_dir": "tasks_train_v2/synth2_log_analyzer"
+    },
+    {
+      "id": "synth_binary_to_decimal",
+      "task_dir": "tasks_train_v2/synth_binary_to_decimal"
+    },
+    {
+      "id": "synth_date_formatter",
+      "task_dir": "tasks_train_v2/synth_date_formatter"
+    },
+    {
+      "id": "synth_dict_key_missing",
+      "task_dir": "tasks_train_v2/synth_dict_key_missing"
+    },
+    {
+      "id": "synth_file_extension_changer",
+      "task_dir": "tasks_train_v2/synth_file_extension_changer"
+    },
+    {
+      "id": "synth_file_extension_checker",
+      "task_dir": "tasks_train_v2/synth_file_extension_checker"
+    },
+    {
+      "id": "synth_function_argument_error",
+      "task_dir": "tasks_train_v2/synth_function_argument_error"
+    },
+    {
+      "id": "synth_integer_division",
+      "task_dir": "tasks_train_v2/synth_integer_division"
+    },
+    {
+      "id": "synth_integer_incrementer",
+      "task_dir": "tasks_train_v2/synth_integer_incrementer"
+    },
+    {
+      "id": "synth_list_concatenator",
+      "task_dir": "tasks_train_v2/synth_list_concatenator"
+    },
+    {
+      "id": "synth_list_flattener",
+      "task_dir": "tasks_train_v2/synth_list_flattener"
+    },
+    {
+      "id": "synth_list_flattener_1",
+      "task_dir": "tasks_train_v2/synth_list_flattener_1"
+    },
+    {
+      "id": "synth_list_flattener_2",
+      "task_dir": "tasks_train_v2/synth_list_flattener_2"
+    },
+    {
+      "id": "synth_list_sorter",
+      "task_dir": "tasks_train_v2/synth_list_sorter"
+    },
+    {
+      "id": "synth_list_squarer",
+      "task_dir": "tasks_train_v2/synth_list_squarer"
+    },
+    {
+      "id": "synth_missing_return_value",
+      "task_dir": "tasks_train_v2/synth_missing_return_value"
+    },
+    {
+      "id": "synth_string_concatenator",
+      "task_dir": "tasks_train_v2/synth_string_concatenator"
+    },
+    {
+      "id": "synth_string_inverter",
+      "task_dir": "tasks_train_v2/synth_string_inverter"
+    },
+    {
+      "id": "synth_string_length_checker",
+      "task_dir": "tasks_train_v2/synth_string_length_checker"
+    },
+    {
+      "id": "synth_string_length_validator",
+      "task_dir": "tasks_train_v2/synth_string_length_validator"
+    },
+    {
+      "id": "synth_string_reverser",
+      "task_dir": "tasks_train_v2/synth_string_reverser"
+    }
+  ]
+}

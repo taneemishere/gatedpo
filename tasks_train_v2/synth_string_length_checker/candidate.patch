@@ -1,0 +1,6 @@
+--- a/utils/string_utils.py
++++ b/utils/string_utils.py
+@@ -1,2 +1,2 @@
+ def check_string_length(s):
+-    return False
++    return 5 <= len(s) <= 10

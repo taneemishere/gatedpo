@@ -1,0 +1,28 @@
+{
+  "name": "list_sorter",
+  "instructions": "The function 'sort_list' is intended to sort a list in ascending order but currently does not work correctly. It should return a sorted list without modifying the original list.",
+  "repo_files": [
+    {
+      "path": "src/list_sorter.py",
+      "content": "def sort_list(lst):\n    lst.sort()\n    return lst\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/list_sorter.py",
+      "content": "def sort_list(lst):\n    return sorted(lst)\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_list_sorter.py",
+      "content": "import unittest\nfrom src.list_sorter import sort_list\nclass TestListSorter(unittest.TestCase):\n    def test_sort_list(self):\n        self.assertEqual(sort_list([3, 1, 2]), [1, 2, 3])\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_list_sorter.py",
+      "content": "import unittest\nfrom src.list_sorter import sort_list\nclass TestListSorter(unittest.TestCase):\n    def test_sort_list_modifies_original(self):\n        original = [3, 1, 2]\n        sorted_list = sort_list(original)\n        self.assertNotEqual(id(original), id(sorted_list))\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

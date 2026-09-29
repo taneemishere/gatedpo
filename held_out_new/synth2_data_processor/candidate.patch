@@ -1,0 +1,11 @@
+--- a/src/data_processor.py
++++ b/src/data_processor.py
+@@ -1,6 +1,8 @@
+ def process_data(data):
+     results = []
+     for entry in data:
++        if entry is None:
++            continue
+         result = calculate_value(entry)
+         results.append(result)
+     return results

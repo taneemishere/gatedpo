@@ -1,0 +1,1 @@
+{"id": "synth_binary_to_decimal", "name": "synth_binary_to_decimal", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/binary_conversion.py"], "visible_tests": ["tests/visible/test_binary_to_decimal.py"], "regression_tests": ["tests/regression/test_binary_to_decimal.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

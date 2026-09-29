@@ -1,0 +1,37 @@
+{
+  "name": "held_out_suite",
+  "cases": [
+    {
+      "id": "held_config_loader",
+      "task_dir": "tasks/config_loader"
+    },
+    {
+      "id": "held_csv_report",
+      "task_dir": "tasks/csv_report"
+    },
+    {
+      "id": "held_pricing_cart",
+      "task_dir": "tasks/pricing_cart"
+    },
+    {
+      "id": "held_order_service",
+      "task_dir": "tasks/order_service"
+    },
+    {
+      "id": "synth2_data_processor",
+      "task_dir": "held_out_new/synth2_data_processor"
+    },
+    {
+      "id": "synth2_email_validator",
+      "task_dir": "held_out_new/synth2_email_validator"
+    },
+    {
+      "id": "synth2_file_uploader",
+      "task_dir": "held_out_new/synth2_file_uploader"
+    },
+    {
+      "id": "synth2_order_processing",
+      "task_dir": "held_out_new/synth2_order_processing"
+    }
+  ]
+}

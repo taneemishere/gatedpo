@@ -1,0 +1,1 @@
+There is a function `flatten_list` that takes a nested list as input and returns a flattened version of it. However, the current implementation does not handle empty lists correctly, causing an error when trying to flatten them.

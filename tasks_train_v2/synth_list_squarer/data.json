@@ -1,0 +1,28 @@
+{
+  "name": "list_squarer",
+  "instructions": "The function 'square_list' is supposed to return a new list where each element is squared. However, it currently returns the original list instead.",
+  "repo_files": [
+    {
+      "path": "src/list_squarer.py",
+      "content": "def square_list(lst):\n    return lst\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/list_squarer.py",
+      "content": "def square_list(lst):\n    return [x**2 for x in lst]\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_square_list.py",
+      "content": "import unittest\nfrom src.list_squarer import square_list\nclass TestSquareList(unittest.TestCase):\n    def test_empty_list(self):\n        self.assertEqual(square_list([]), [])\n    def test_single_element(self):\n        self.assertEqual(square_list([5]), [25])\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_square_list_regression.py",
+      "content": "import unittest\nfrom src.list_squarer import square_list\nclass TestSquareListRegression(unittest.TestCase):\n    def test_negative_numbers(self):\n        self.assertEqual(square_list([-2, -1, 0, 1, 2]), [4, 1, 0, 1, 4])\nif __name__ == '__main__':\n    unittest.main()\n"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "date_formatter",
+  "instructions": "A function `format_date` is supposed to convert a date string from 'YYYY-MM-DD' format to 'Month DD, YYYY'. However, it currently returns the input date as is without any formatting.",
+  "repo_files": [
+    {
+      "path": "src/date_utils.py",
+      "content": "def format_date(date_str):\n    return date_str\n"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/date_utils.py",
+      "content": "import datetime\n\ndef format_date(date_str):\n    date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d')\n    return date_obj.strftime('%B %d, %Y')\n"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_format_date.py",
+      "content": "from src.date_utils import format_date\n\ndef test_format_date():\n    assert format_date('2023-10-05') == 'October 05, 2023'\n"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_format_date.py",
+      "content": "from src.date_utils import format_date\n\ndef test_format_date_returns_original_string():\n    assert format_date('2023-10-05') != '2023-10-05'\n"
+    }
+  ]
+}

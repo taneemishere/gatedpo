@@ -1,0 +1,1 @@
+The `upload_file` function in `src/file_uploader.py` incorrectly handles file extensions when determining whether to compress the file before uploading. It should check if the file extension is '.txt' or '.log' before deciding to compress it. Currently, any file with a '.' in its name will be compressed, which is incorrect.

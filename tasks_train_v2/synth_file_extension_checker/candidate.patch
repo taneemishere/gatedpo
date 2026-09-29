@@ -1,0 +1,6 @@
+--- a/src/checker.py
++++ b/src/checker.py
+@@ -1,2 +1,2 @@
+ def check_file_extension(file_path, extension):
+-    return extension in file_path
++    return file_path.endswith(extension)

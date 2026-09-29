@@ -1,0 +1,6 @@
+--- a/src/division.py
++++ b/src/division.py
+@@ -1,2 +1,2 @@
+ def divide_numbers(a, b):
+-    return a // b
++    return int(a / b)

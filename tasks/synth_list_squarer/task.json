@@ -1,0 +1,1 @@
+{"id": "synth_list_squarer", "name": "synth_list_squarer", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/list_squarer.py"], "visible_tests": ["tests/visible/test_square_list.py"], "regression_tests": ["tests/regression/test_square_list_regression.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

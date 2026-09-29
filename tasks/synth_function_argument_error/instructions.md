@@ -1,0 +1,1 @@
+A function is being called with incorrect arguments. The function expects two integers but receives a string and an integer instead. Fix the argument passed to the function.

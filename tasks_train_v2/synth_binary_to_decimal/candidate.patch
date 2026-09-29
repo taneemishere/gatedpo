@@ -1,0 +1,6 @@
+--- a/src/binary_conversion.py
++++ b/src/binary_conversion.py
+@@ -1,2 +1,2 @@
+ def binary_to_decimal(binary_str):
+-    return binary_str
++    return int(binary_str, 2)

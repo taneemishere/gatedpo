@@ -1,0 +1,11 @@
+--- a/src/list_utils.py
++++ b/src/list_utils.py
+@@ -2,7 +2,7 @@
+     result = []
+     for item in nested_list:
+         if isinstance(item, list):
+-            result.extend(flatten_list(item))
++            result += flatten_list(item)
+         else:
+             result.append(item)
+     return result

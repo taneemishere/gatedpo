@@ -1,0 +1,1 @@
+{"id": "data_analyzer", "name": "data_analyzer", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/data_analyzer.py"], "visible_tests": ["tests/visible/test_data_analyzer.py"], "regression_tests": ["tests/regression/test_data_analyzer_regression.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

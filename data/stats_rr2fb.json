@@ -1,0 +1,668 @@
+{
+  "suite": "benchmarks/rl_pilot_suite_train_v7.json",
+  "model": "gatedpo_rr2fb",
+  "num_samples": 12,
+  "repair_samples": 4,
+  "repair_states": 8,
+  "strategy": "all_edges",
+  "intra_gate": true,
+  "progress_pairs": true,
+  "tasks": 51,
+  "pairs_total": 584,
+  "pair_type_hist": {
+    "intra_gate": 107,
+    "inter_gate": 372,
+    "progress": 105
+  },
+  "turn1_terminal_gate_hist": {
+    "visible_tests": 206,
+    "python_ast": 80,
+    "release_gate_regressions": 32,
+    "patch_applies": 132,
+    "promoted": 186
+  },
+  "rejected_arm_gate_hist": {
+    "visible_tests": 217,
+    "release_gate_regressions": 32,
+    "patch_applies": 203,
+    "python_ast": 132
+  },
+  "per_task": {
+    "markdown_link_extractor": {
+      "task_id": "markdown_link_extractor",
+      "turn1_terminal_hist": {
+        "visible_tests": 12
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "range_parser": {
+      "task_id": "range_parser",
+      "turn1_terminal_hist": {
+        "visible_tests": 7,
+        "python_ast": 2,
+        "release_gate_regressions": 3
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "smoke_markdown_parser": {
+      "task_id": "smoke_markdown_parser",
+      "turn1_terminal_hist": {
+        "patch_applies": 8,
+        "python_ast": 3,
+        "visible_tests": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 8
+    },
+    "string_slugifier": {
+      "task_id": "string_slugifier",
+      "turn1_terminal_hist": {
+        "visible_tests": 9,
+        "patch_applies": 2,
+        "release_gate_regressions": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 14
+    },
+    "synth2_data_analyzer": {
+      "task_id": "synth2_data_analyzer",
+      "turn1_terminal_hist": {
+        "visible_tests": 7,
+        "python_ast": 4,
+        "patch_applies": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 16
+    },
+    "synth2_log_analyzer": {
+      "task_id": "synth2_log_analyzer",
+      "turn1_terminal_hist": {
+        "patch_applies": 8,
+        "visible_tests": 1,
+        "promoted": 3
+      },
+      "turn1_promoted": 3,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 14
+    },
+    "synth_binary_to_decimal": {
+      "task_id": "synth_binary_to_decimal",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_date_formatter": {
+      "task_id": "synth_date_formatter",
+      "turn1_terminal_hist": {
+        "visible_tests": 10,
+        "promoted": 2
+      },
+      "turn1_promoted": 2,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "synth_dict_key_missing": {
+      "task_id": "synth_dict_key_missing",
+      "turn1_terminal_hist": {
+        "promoted": 10,
+        "python_ast": 2
+      },
+      "turn1_promoted": 10,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 2,
+      "pairs": 15
+    },
+    "synth_file_extension_changer": {
+      "task_id": "synth_file_extension_changer",
+      "turn1_terminal_hist": {
+        "visible_tests": 8,
+        "promoted": 4
+      },
+      "turn1_promoted": 4,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 18
+    },
+    "synth_file_extension_checker": {
+      "task_id": "synth_file_extension_checker",
+      "turn1_terminal_hist": {
+        "promoted": 9,
+        "visible_tests": 3
+      },
+      "turn1_promoted": 9,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 3,
+      "pairs": 21
+    },
+    "synth_function_argument_error": {
+      "task_id": "synth_function_argument_error",
+      "turn1_terminal_hist": {
+        "release_gate_regressions": 5,
+        "promoted": 7
+      },
+      "turn1_promoted": 7,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 5,
+      "pairs": 2
+    },
+    "synth_integer_division": {
+      "task_id": "synth_integer_division",
+      "turn1_terminal_hist": {
+        "visible_tests": 12
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 0
+    },
+    "synth_integer_incrementer": {
+      "task_id": "synth_integer_incrementer",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_list_concatenator": {
+      "task_id": "synth_list_concatenator",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_list_flattener": {
+      "task_id": "synth_list_flattener",
+      "turn1_terminal_hist": {
+        "promoted": 10,
+        "visible_tests": 2
+      },
+      "turn1_promoted": 10,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 2,
+      "pairs": 5
+    },
+    "synth_list_flattener_1": {
+      "task_id": "synth_list_flattener_1",
+      "turn1_terminal_hist": {
+        "promoted": 7,
+        "patch_applies": 5
+      },
+      "turn1_promoted": 7,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 5,
+      "pairs": 13
+    },
+    "synth_list_flattener_2": {
+      "task_id": "synth_list_flattener_2",
+      "turn1_terminal_hist": {
+        "promoted": 8,
+        "patch_applies": 2,
+        "visible_tests": 2
+      },
+      "turn1_promoted": 8,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 4,
+      "pairs": 12
+    },
+    "synth_list_sorter": {
+      "task_id": "synth_list_sorter",
+      "turn1_terminal_hist": {
+        "visible_tests": 6,
+        "release_gate_regressions": 1,
+        "promoted": 5
+      },
+      "turn1_promoted": 5,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 7,
+      "pairs": 16
+    },
+    "synth_list_squarer": {
+      "task_id": "synth_list_squarer",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_missing_return_value": {
+      "task_id": "synth_missing_return_value",
+      "turn1_terminal_hist": {
+        "promoted": 6,
+        "python_ast": 6
+      },
+      "turn1_promoted": 6,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 6,
+      "pairs": 14
+    },
+    "synth_string_concatenator": {
+      "task_id": "synth_string_concatenator",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_string_inverter": {
+      "task_id": "synth_string_inverter",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_string_length_checker": {
+      "task_id": "synth_string_length_checker",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_string_length_validator": {
+      "task_id": "synth_string_length_validator",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "synth_string_reverser": {
+      "task_id": "synth_string_reverser",
+      "turn1_terminal_hist": {
+        "promoted": 12
+      },
+      "turn1_promoted": 12,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 0,
+      "pairs": 0
+    },
+    "config_validator": {
+      "task_id": "config_validator",
+      "turn1_terminal_hist": {
+        "patch_applies": 7,
+        "python_ast": 1,
+        "visible_tests": 3,
+        "release_gate_regressions": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 18
+    },
+    "email_validator": {
+      "task_id": "email_validator",
+      "turn1_terminal_hist": {
+        "release_gate_regressions": 7,
+        "visible_tests": 2,
+        "patch_applies": 2,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "file_processor_pipeline": {
+      "task_id": "file_processor_pipeline",
+      "turn1_terminal_hist": {
+        "release_gate_regressions": 2,
+        "python_ast": 5,
+        "patch_applies": 3,
+        "visible_tests": 1,
+        "promoted": 1
+      },
+      "turn1_promoted": 1,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 21
+    },
+    "invoice_processor": {
+      "task_id": "invoice_processor",
+      "turn1_terminal_hist": {
+        "promoted": 3,
+        "patch_applies": 6,
+        "python_ast": 2,
+        "visible_tests": 1
+      },
+      "turn1_promoted": 3,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 13
+    },
+    "config_validator_strict": {
+      "task_id": "config_validator_strict",
+      "turn1_terminal_hist": {
+        "visible_tests": 5,
+        "patch_applies": 6,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 14
+    },
+    "file_processor_pipeline_b2": {
+      "task_id": "file_processor_pipeline_b2",
+      "turn1_terminal_hist": {
+        "patch_applies": 7,
+        "python_ast": 2,
+        "visible_tests": 1,
+        "release_gate_regressions": 2
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 15
+    },
+    "order_processor": {
+      "task_id": "order_processor",
+      "turn1_terminal_hist": {
+        "python_ast": 3,
+        "visible_tests": 5,
+        "patch_applies": 4
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 17
+    },
+    "transaction_processor": {
+      "task_id": "transaction_processor",
+      "turn1_terminal_hist": {
+        "patch_applies": 9,
+        "visible_tests": 3
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "batch_processor_accumulator": {
+      "task_id": "batch_processor_accumulator",
+      "turn1_terminal_hist": {
+        "visible_tests": 8,
+        "patch_applies": 3,
+        "promoted": 1
+      },
+      "turn1_promoted": 1,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "inventory_forecast_simulator": {
+      "task_id": "inventory_forecast_simulator",
+      "turn1_terminal_hist": {
+        "visible_tests": 7,
+        "promoted": 2,
+        "python_ast": 1,
+        "patch_applies": 2
+      },
+      "turn1_promoted": 2,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 16
+    },
+    "inventory_reorder_predictor": {
+      "task_id": "inventory_reorder_predictor",
+      "turn1_terminal_hist": {
+        "python_ast": 11,
+        "visible_tests": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 13
+    },
+    "order_fulfillment_estimator": {
+      "task_id": "order_fulfillment_estimator",
+      "turn1_terminal_hist": {
+        "patch_applies": 2,
+        "visible_tests": 7,
+        "python_ast": 3
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 15
+    },
+    "order_fulfillment_processor": {
+      "task_id": "order_fulfillment_processor",
+      "turn1_terminal_hist": {
+        "visible_tests": 1,
+        "patch_applies": 8,
+        "release_gate_regressions": 2,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 13
+    },
+    "time_series_rolling_aggregator": {
+      "task_id": "time_series_rolling_aggregator",
+      "turn1_terminal_hist": {
+        "visible_tests": 5,
+        "python_ast": 7
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 15
+    },
+    "order_quantity_validator": {
+      "task_id": "order_quantity_validator",
+      "turn1_terminal_hist": {
+        "patch_applies": 4,
+        "visible_tests": 7,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 15
+    },
+    "shipment_coverage_calculator": {
+      "task_id": "shipment_coverage_calculator",
+      "turn1_terminal_hist": {
+        "patch_applies": 8,
+        "visible_tests": 4
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 14
+    },
+    "shipment_priority_assigner": {
+      "task_id": "shipment_priority_assigner",
+      "turn1_terminal_hist": {
+        "visible_tests": 7,
+        "python_ast": 5
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 14
+    },
+    "batch_processor_with_parallel_execution": {
+      "task_id": "batch_processor_with_parallel_execution",
+      "turn1_terminal_hist": {
+        "visible_tests": 9,
+        "python_ast": 3
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "inventory_replenishment_alerter": {
+      "task_id": "inventory_replenishment_alerter",
+      "turn1_terminal_hist": {
+        "patch_applies": 2,
+        "visible_tests": 9,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "shipment_charge_calculator": {
+      "task_id": "shipment_charge_calculator",
+      "turn1_terminal_hist": {
+        "patch_applies": 4,
+        "visible_tests": 7,
+        "release_gate_regressions": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 15
+    },
+    "order_quantity_adjuster_b5": {
+      "task_id": "order_quantity_adjuster_b5",
+      "turn1_terminal_hist": {
+        "visible_tests": 10,
+        "python_ast": 1,
+        "patch_applies": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "shipment_priority_assigner_b5": {
+      "task_id": "shipment_priority_assigner_b5",
+      "turn1_terminal_hist": {
+        "visible_tests": 11,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "inventory_reconciliation_engine": {
+      "task_id": "inventory_reconciliation_engine",
+      "turn1_terminal_hist": {
+        "patch_applies": 9,
+        "python_ast": 2,
+        "visible_tests": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 16
+    },
+    "priority_queue_scheduler": {
+      "task_id": "priority_queue_scheduler",
+      "turn1_terminal_hist": {
+        "python_ast": 6,
+        "patch_applies": 4,
+        "visible_tests": 2
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    },
+    "order_quantity_validator_b5r": {
+      "task_id": "order_quantity_validator_b5r",
+      "turn1_terminal_hist": {
+        "visible_tests": 2,
+        "patch_applies": 2,
+        "release_gate_regressions": 7,
+        "python_ast": 1
+      },
+      "turn1_promoted": 0,
+      "turn1_samples": 12,
+      "turn1_verified": 12,
+      "progress_states": 8,
+      "pairs": 12
+    }
+  },
+  "elapsed_seconds": 802.3
+}

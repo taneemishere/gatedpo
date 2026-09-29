@@ -1,0 +1,1 @@
+The function 'check_file_extension' is supposed to verify if a given file path has a specific extension. However, it currently returns True for any file that contains the specified extension anywhere in its path, not just at the end. Fix this so that it correctly checks only the end of the file path.

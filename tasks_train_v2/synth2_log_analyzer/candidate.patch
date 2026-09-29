@@ -1,0 +1,11 @@
+--- a/src/log_analyzer.py
++++ b/src/log_analyzer.py
+@@ -1,7 +1,7 @@
+ def summarize_logs(logs, threshold):
+     count = 0
+     for log in logs:
+-        if log['severity'] <= threshold:
++        if log['severity'] > threshold:
+             count += 1
+     return count
+ 

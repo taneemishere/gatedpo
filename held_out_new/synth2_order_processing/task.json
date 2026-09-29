@@ -1,0 +1,1 @@
+{"id": "order_processing", "name": "order_processing", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/order_processor.py"], "visible_tests": ["tests/visible/test_order_processor.py"], "regression_tests": ["tests/regression/test_order_processor.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

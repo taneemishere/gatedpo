@@ -1,0 +1,11 @@
+--- a/src/email_validator.py
++++ b/src/email_validator.py
+@@ -3,7 +3,7 @@
+     if len(parts) != 2:
+         return False
+     username, domain = parts
+-    if '.' in username and '..' in username:
++    if '..' in username:
+         return False
+     return is_valid_domain(domain)
+ 

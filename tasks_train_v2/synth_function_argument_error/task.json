@@ -1,0 +1,1 @@
+{"id": "synth_function_argument_error", "name": "synth_function_argument_error", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/addition.py"], "visible_tests": ["tests/visible/test_addition.py"], "regression_tests": ["tests/regression/test_addition.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

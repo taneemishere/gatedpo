@@ -1,0 +1,1 @@
+{"id": "synth_string_concatenator", "name": "synth_string_concatenator", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["src/string_utils.py"], "visible_tests": ["tests/visible/test_string_utils.py"], "regression_tests": ["tests/regression/test_string_utils.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}

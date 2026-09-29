@@ -1,0 +1,11 @@
+--- a/src/addition.py
++++ b/src/addition.py
+@@ -2,7 +2,7 @@
+     return a + b
+ 
+ def main():
+-    result = add_numbers('5', 3)
++    result = add_numbers(5, 3)
+     print(result)
+ 
+ if __name__ == '__main__':

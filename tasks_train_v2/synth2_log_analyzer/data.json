@@ -1,0 +1,28 @@
+{
+  "name": "log_analyzer",
+  "instructions": "The log_analyzer module is designed to filter and summarize logs based on severity levels. However, there is a bug in the `summarize_logs` function that causes it to incorrectly count logs above a certain threshold. The function should return the total number of logs that have a severity level greater than the specified threshold. Currently, it returns the total number of logs regardless of severity.",
+  "repo_files": [
+    {
+      "path": "src/log_analyzer.py",
+      "content": "def summarize_logs(logs, threshold):\n    count = 0\n    for log in logs:\n        if log['severity'] <= threshold:\n            count += 1\n    return count\n\nlogs = [{'message': 'Error', 'severity': 5}, {'message': 'Warning', 'severity': 3}, {'message': 'Info', 'severity': 1}]\nprint(summarize_logs(logs, 4))"
+    }
+  ],
+  "fixed_repo_files": [
+    {
+      "path": "src/log_analyzer.py",
+      "content": "def summarize_logs(logs, threshold):\n    count = 0\n    for log in logs:\n        if log['severity'] > threshold:\n            count += 1\n    return count\n\nlogs = [{'message': 'Error', 'severity': 5}, {'message': 'Warning', 'severity': 3}, {'message': 'Info', 'severity': 1}]\nprint(summarize_logs(logs, 4))"
+    }
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/visible/test_log_analyzer.py",
+      "content": "import unittest\nfrom src.log_analyzer import summarize_logs\nclass TestLogAnalyzer(unittest.TestCase):\n    def test_summarize_logs(self):\n        logs = [{'message': 'Error', 'severity': 5}, {'message': 'Warning', 'severity': 3}, {'message': 'Info', 'severity': 1}]\n        self.assertEqual(summarize_logs(logs, 4), 1)\nif __name__ == '__main__':\n    unittest.main()"
+    }
+  ],
+  "regression_tests": [
+    {
+      "path": "tests/regression/test_log_analyzer.py",
+      "content": "import unittest\nfrom src.log_analyzer import summarize_logs\nclass TestLogAnalyzerRegression(unittest.TestCase):\n    def test_summarize_logs_regression(self):\n        logs = [{'message': 'Error', 'severity': 5}, {'message': 'Warning', 'severity': 3}, {'message': 'Info', 'severity': 1}]\n        self.assertNotEqual(summarize_logs(logs, 4), 2)\nif __name__ == '__main__':\n    unittest.main()"
+    }
+  ]
+}

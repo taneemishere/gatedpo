@@ -1,0 +1,6 @@
+--- a/src/integer_incrementer.py
++++ b/src/integer_incrementer.py
+@@ -1,2 +1,2 @@
+ def increment_integer(num):
+-    return num
++    return num + 1

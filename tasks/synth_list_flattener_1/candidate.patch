@@ -1,0 +1,11 @@
+--- a/flattener.py
++++ b/flattener.py
+@@ -3,7 +3,7 @@
+     for item in nested_list:
+         if isinstance(item, list):
+             result.extend(flatten_list(item))
+-        else:
++        elif item is not None:
+             result.append(item)
+     return result
+ 

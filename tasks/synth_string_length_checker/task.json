@@ -1,0 +1,1 @@
+{"id": "synth_string_length_checker", "name": "synth_string_length_checker", "workspace": "repo", "instructions": "instructions.md", "allowed_paths": ["utils/string_utils.py"], "visible_tests": ["tests/visible/test_string_length.py"], "regression_tests": ["tests/regression/test_string_length.py"], "default_patch": "candidate.patch", "candidate_patches": ["candidate.patch"]}
